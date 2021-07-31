@@ -42,12 +42,10 @@ defmodule PentoWeb.WrongLive do
     """
   end
 
-  def handle_event("guess", %{"number" => guess} = data, socket) do
+  def handle_event("guess", %{"number" => guess}, socket) do
     %{assigns: %{number: number, score: score}} = socket
 
     if String.to_integer(guess) == number do
-      message = "You win, it's #{number}."
-
       {
         :noreply,
         assign(
@@ -82,7 +80,6 @@ defmodule PentoWeb.WrongLive do
       )
     }
   end
-
 
   def time() do
     DateTime.utc_now() |> to_string()
