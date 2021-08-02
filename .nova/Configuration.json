@@ -2,5 +2,7 @@
   "index.ignored_file_patterns" : [
     "\/deps\/*",
     "\/_build\/*"
-  ]
+  ],
+  "workspace.color" : 6,
+  "workspace.name" : "pento"
 }
